@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #fff176, #ff7043);
+  min-height: 100vh;
+}
+
+/* คอนเทนเนอร์หลัก */
+.container {
+  max-width: 1600px;   /* ปรับขนาดสูงสุดได้ */
+  margin: 0 auto;      /* จัดตรงกลางจอ */
+  padding: 0 40px;     /* ขอบซ้ายขวาเล็ก ๆ */
+  
+}
+
+/* แบนเนอร์เต็มความกว้างคอนเทนเนอร์ */
+.banner {
+  position: relative;
+}
+
+.banner img {
+   width: 100%;
+  height: auto;
+  max-height: 500px; /* กำหนดความสูงสุดภาพ */
+  object-fit: cover;
+}
+
+.menu {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* กล่องภาพตรงกลาง */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 20px auto;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 10px auto;
+}
+
+.grid-box {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.grid-box img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.grid-box img:hover {
+  transform: scale(1.03);
+}
+h1 {
+  font-size: 68px; /* หรือขนาดที่ต้องการ */
+  font-weight: bold;
+  color: #000000;     /* เปลี่ยนสีข้อความถ้าต้องการ */
+}
+
+.about-container {
+  background: white;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  max-width: 1600px;       /* ใช้แค่ครั้งเดียวพอ */
+  width: 90%;              /* ขยายให้ยืดตามจอ */
+  margin: 40px auto;
+  padding: 60px 80px;      /* ทั้งบนล่างและซ้ายขวา */
+}
+
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff7043;
+  margin-bottom: 20px;
+}
+
+.bio-section {
+  background: #fffaf3;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bio-section h2 {
+  text-align: center;
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.bio-detail p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+
+.link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ff7043;
+  text-decoration: none;
+  border: 2px solid #ff7043;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.link:hover {
+  background: #ff7043;
+  color: white;
+}
+
+.back-home {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.back-home a {
+  color: #ff7043;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 2px solid #ff7043;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.back-home a:hover {
+  background: #ff7043;
+  color: white;
+}
+
+
+/* CSS สำหรับแกลเลอรีและรูปภาพปกติ (ใช้ของเดิมของคุณได้เลย) */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.image-gallery img {
+  width: 90%; /* หรือขนาดที่คุณต้องการ */
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  border: 10px solid white; /* กรอบสีขาว */
+  padding: 10px; /* ระยะห่างภายในกรอบ */
+  cursor: pointer; /* แสดงไอคอนมือชี้เมื่อเอาเมาส์ไปวาง */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* CSS สำหรับ image-gallery2 (Thumbnail รูปแนวยาว) */
+.image-gallery2 {
+  display: flex; /* ใช้ flexbox เพื่อจัดเรียง */
+  flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่ได้ถ้าพื้นที่ไม่พอ */
+  justify-content: center; /* จัดกึ่งกลางรูปภาพในแกลเลอรี */
+  gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+  margin: 50px auto; /* ระยะห่างด้านบนและล่าง, จัดกึ่งกลาง */
+  max-width: 2000px; /* ความกว้างสูงสุดของแกลเลอรีนี้ */
+  padding: 0 20px;
+}
+
+.image-gallery2 img {
+  width: 600px; /* กำหนดความกว้างของ thumbnail ให้ตายตัว */
+  height: auto; /* ปล่อยให้ความสูงปรับตามสัดส่วนของรูปภาพแนวยาว */
+  max-width: 100%; /* ไม่ให้รูปใหญ่เกิน container */
+  border-radius: 15px; /* มุมโค้งมนเล็กน้อย */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* เงา */
+  transition: transform 0.3s ease-in-out;
+  border: 8px solid #F0F0F0; /* กรอบสีเทาอ่อน */
+  padding: 5px; /* ระยะห่างภายในกรอบ */
+  cursor: pointer; /* แสดงไอคอนมือชี้ */
+  object-fit: contain; /* สำคัญสำหรับรูปแนวยาว: ทำให้รูปภาพพอดีกับพื้นที่โดยไม่ถูกตัด */
+}
+
+.image-gallery2 img:hover {
+  transform: scale(1.03); /* ขยายเล็กน้อยเมื่อเอาเมาส์ไปวาง */
+}
+
+/* สำหรับข้อความบรรยายใต้แกลเลอรี */
+.caption {
+  text-align: center; /* จัดกึ่งกลางข้อความ */
+  margin-top: 20px; /* ระยะห่างด้านบนจากแกลเลอรี */
+  font-size: 4em; /* ขนาดตัวอักษร */
+  color: #000000; /* สีข้อความ */
+  font-weight: bold; /* ทำให้ตัวหนา */
+}
